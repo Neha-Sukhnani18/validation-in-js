@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+            <label>name</label>
+            <input type="text" id="name">
+            <button onclick="Function()">OK</button><br>
+        </form>
+        <p>enter you age and click on "OK"</p>
+        <b><i>please ensure that your age is in-between 7-20 otherwise you will not ne able to take a part in this acivity </i></b><br>
+        <input id="id1" input type="number" min="7" max="20" required>
+        <button onclick="myFunction()">OK</button>
+        <p id="result"></p>
+        <script>
+            function myFunction(){
+                var inpObj=document.getElementById("id1");
+                if(!inpObj.checkValidity()){
+                    docuemtn.getElementById("result").innerHTML=inpObj.validationMessage;
+                }else{
+                    document.getElementById("result").innerHTML="input OK";
+                }
+            }
+        </script>
+    </body>
+</html>
